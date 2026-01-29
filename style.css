@@ -1,0 +1,37 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#ff6bcb;
+  --muted:#9aa4b2;
+  --text:#e6eef6;
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background: linear-gradient(180deg,#071428 0%, #0f2340 100%); color:var(--text); -webkit-font-smoothing:antialiased}
+.container{max-width:880px;margin:24px auto;padding:20px}
+.site-header{text-align:center;padding:24px 8px}
+.site-header h1{margin:0;font-size:2.2rem;letter-spacing:0.6px}
+.tagline{color:var(--muted);margin-top:8px}
+
+.hero{background:var(--glass);padding:18px;border-radius:12px;display:flex;flex-direction:column;gap:12px;align-items:center}
+.hearts{font-size:1.6rem}
+.intro{max-width:70ch;text-align:center;color:var(--muted);margin:0}
+
+.controls{display:flex;gap:8px;margin-top:6px}
+button{background:linear-gradient(90deg,var(--accent),#ff9ad6);border:0;padding:10px 14px;border-radius:10px;color:#08202c;font-weight:600;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.3)}
+button[aria-pressed="true"]{transform:translateY(1px);box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+
+.story{margin-top:18px;background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;line-height:1.6}
+.story h2{margin-top:0}
+blockquote{margin:12px 0;padding:12px;border-left:4px solid var(--accent);background:rgba(255,255,255,0.02);border-radius:6px;color:var(--text)}
+
+.notes{margin-top:12px;padding:12px;color:var(--muted);font-size:0.95rem;background:rgba(0,0,0,0.12);border-radius:8px}
+
+.site-footer{text-align:center;padding:18px;color:var(--muted);font-size:0.95rem;margin-top:18px}
+
+@media (min-width:900px){
+  .container{display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start}
+  .story{order:1}
+  .notes{order:2}
+}
